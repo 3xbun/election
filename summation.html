@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MD Election</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="container">
+            <h1>MD Election</h1>
+            <h2>{{title}}</h2>
+            <div class="result animate__animated animate__fadeInUp" v-if="showResult">
+                <hr>
+                <table>
+                    <thead>
+                        <td></td>
+                        <td>ชื่อจริง</td>
+                        <td>คะแนน</td>
+                    </thead>
+                    <tbody>
+                        <tr v-for="(candidate, key) in candidates">
+                            <td v-if="key <= 2">
+                                <img class="resultImage" :src="candidate.profileImage">
+                            </td>
+                            <td v-if="key <= 2">
+                                <p>{{candidate.fullName}}</p>
+                            </td>
+                            <td v-if="key <= 2">
+                                {{polls[Object.keys(polls)[key]]}}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>ผู้งดออกเสียงทั้งหมด {{polls.novote}} คน</p>
+                <p>ผู้ลงคะแนนเสียงทั้งหมด {{polls.totalVoter}} คน</p>
+            </div>
+
+            <p v-else class="cfBtn" @click="showVote()">แสดงผลการเลือกตั้ง</p>
+        </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

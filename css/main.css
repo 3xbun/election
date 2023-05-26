@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@200;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Prompt', sans-serif;
+    background-color: #848484;
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.container {
+    background-color: #f1f1f1;
+    width: 85vw;
+    margin: auto;
+    border-radius: .5em;
+    padding: 1em;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+h1 {
+    color: #1d68af;
+}
+
+h2 {
+    color: #72b9e0;
+}
+
+hr {
+    margin: 1em 0;
+}
+
+.profileImage>img {
+    height: 100px;
+    border-radius: .5em;
+}
+
+.candidates {
+    width: 85%;
+    margin: auto;
+}
+
+.name {
+    height: 100%;
+}
+
+.candidate,
+.profileImage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.candidate {
+    margin-bottom: 1em;
+}
+
+.checkBtn {
+    background-color: #72b9e0;
+    padding: 1em;
+    height: 100px;
+    border-radius: .5em;
+    cursor: pointer;
+    color: white;
+}
+
+.profileImage {
+    width: 100px;
+    margin-right: 1em;
+}
+
+.name {
+    margin-right: auto;
+    text-align: left;
+}
+
+.modal {
+    background-color: #f1f1f1;
+    width: 50vw;
+    border-radius: .5em;
+    padding: 1em;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 20px;
+}
+
+.modal>p {
+    margin-bottom: 1em;
+}
+
+.modal>img,
+.resultImage {
+    height: 10vh;
+    border-radius: .5em;
+}
+
+.cfBtn {
+    width: 100%;
+    padding: 1em;
+    background-color: #72b9e0;
+    padding: 1em;
+    border-radius: .5em;
+    cursor: pointer;
+    color: white;
+    margin-top: 1em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.success {
+    top: 20vh;
+}
+
+.result>table {
+    width: 100%;
+    margin-top: 1em;
+}
+
+thead {
+    font-weight: bold;
+}
+
+th,
+td {
+    padding: .1em;
+}
